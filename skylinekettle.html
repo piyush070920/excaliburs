@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <style>
+      * {
+        font-family:  Verdana, Geneva, Tahoma, sans-serif;
+      	}	
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+      }
+
+      header {
+        background-color: #0b8d59;
+        padding: 10px;
+        text-align: center;
+		color: white;
+		font-weight: 1200;
+      }
+
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 20px;
+      }
+
+      .product-img {
+        flex: 1;
+        margin-right: 20px;
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+    }
+    
+    .product-img img {
+        display: block;
+        max-width: 100%;
+        height: 100%;
+		margin: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      .product-details {
+        flex: 1;
+      }
+
+      .product-details h2 {
+        margin-top: 0;
+      }
+
+      footer {
+        background-color: #f2f2f2;
+        padding: 10px;
+        text-align: center;
+      }
+ 
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>SKY LINE KETTLE</h1>
+    </header>
+    <main>
+      <div class="product-img">
+        <img src="productImg/IMG-20230124-WA0047.jpg" class="prod" alt="Product Image" />
+      </div>
+      <div class="product-details">
+        <h2>Product Description</h2>
+
+        <p>Production Condition: Average condition</p>
+        <p>Product Age: 1 months old</p>
+        <p>PRICE: Rs 10/day</p>
+        
+        <h2>Owner Details</h2>
+        <p><b>Owner:</b> John Doe</p>
+        <p><b>Email:</b> john.doe@example.com</p>
+        <p><b>Phone:</b> 123-456-7890</p>
+		<div>
+			<span>Enter Duration in days</span>
+			<input type="number" name="duration" class="duration" maxlength="180" placeholder="days" onchange="cal()"/>
+			<p>Expected Price: <span class="exprice"></span></p>
+		</div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 Product Name. All rights reserved.</p>
+    </footer>
+	<script>
+		function cal(){
+			const x = document.querySelector('.duration').value;
+			const y = document.querySelector('.exprice');
+			console.log(x);
+			y.innerHTML = "Rs : " +x*10;
+		}
+		
+	</script>
+  </body>
+</html>
